@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Card Battle</title>
+  <link rel="stylesheet" href="./styles/game.css">
+</head>
+
+<body>
+  <header>
+    <div class="row">
+      <h1>Card Battle</h1>
+    </div>
+  </header>
+
+  <section id="game" class="row"> <!-- The game section starts -->
+    <div id="start-scene" class="scene">
+      <a href="#" id="start-btn" class="button"></a>
+    </div>
+
+    <div id="game-scene" class="scene out">
+      <div class="hp-background">
+        <div class="hp opponent"></div>
+        <div class="hp player"></div>
+      </div>
+      <div class="battle-indicator"></div>
+      <div class="card player a flipped out">
+        <div class="front face">
+          <div class="power">100</div>
+        </div>
+        <div class="back face"></div>
+      </div>
+      <div class="card player b flipped out">
+        <div class="front face">
+          <div class="power">100</div>
+        </div>
+        <div class="back face"></div>
+      </div>
+      <div class="card player c flipped out">
+        <div class="front face">
+          <div class="power">100</div>
+        </div>
+        <div class="back face"></div>
+      </div>
+      <div class="card opponent out">
+        <div class="front face">
+          <div class="power">100</div>
+        </div>
+        <div class="back face">back</div>
+      </div>
+      <div class="blaze toward-left"></div>
+      <div class="blaze toward-right"></div>
+    </div>
+
+    <div id="gameover-scene" class="scene out win lose">
+      <p><a href="#" id="back-to-menu-button" class="button"></a></p>
+    </div> 
+  </section> <!-- The game section ends -->
+
+  <section class="how-to-play row">
+    <h2>How to Play?</h2>
+    <p>Pick one card and watch the battle result. Beat opponent before you run out of HP.</p>
+  </section>
+  
+  <footer>
+    <div class="row">
+      <details>
+        <summary>Copyright Information</summary>
+        This game is a modified example from the <a href="https://www.packtpub.com/product/html5-game-development-hotshot/9781849695466" target="_blank">'HTML5 Game Development HOTSHOT'</a> book by Makzan. Free for personal and commercial use.
+      </details>
+    </div>
+  </footer>
+
+  
+  <!-- Loading all the JS logic -->
+  <script src="./js/patch.js"></script> 
+  <script src="./js/scenes.js"></script>
+  <script src="./js/hp.js"></script>
+  <script src="./js/game-scene.js"></script>
+  <script src="./js/game.js"></script>
+</body>
+</html>
